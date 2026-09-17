@@ -1,0 +1,13 @@
+:root {
+  --color-pulso-bg: #0A0F1D;
+  --color-pulso-cyan: #00F5D4;
+  --color-pulso-blue: #0EA5E9;
+  --color-pulso-indigo: #6366F1;
+  --font-main: 'Space Grotesk', sans-serif;
+}
+
+body {
+  background-color: var(--color-pulso-bg);
+  color: #ffffff;
+  font-family: var(--font-main);
+}

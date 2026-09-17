@@ -1,0 +1,111 @@
+/* Container Principal */
+.splash-container {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background-color: #0A0F1D;
+  color: #FFFFFF;
+  user-select: none;
+  cursor: pointer;
+  overflow: hidden;
+  padding: 2rem;
+  background-image: 
+    radial-gradient(circle at 10% 10%, rgba(0, 245, 212, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 90% 90%, rgba(14, 165, 233, 0.08) 0%, transparent 40%);
+}
+
+.splash-accent-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #00F5D4 0%, #0EA5E9 50%, #6366F1 100%);
+}
+
+.splash-content-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+/* Estilo Leve e Elegante da Tipografia */
+.splash-phrase {
+  position: absolute;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 300; /* Tipografia fina e sofisticada */
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: #F8FAFC;
+  font-size: 1.25rem;
+  max-width: 22rem;
+}
+
+@media (min-width: 768px) {
+  .splash-phrase {
+    font-size: 2rem;
+    max-width: 28rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .splash-phrase {
+    font-size: 2.5rem;
+    max-width: 32rem;
+  }
+}
+
+/* Posições Espaçadas (4 cantos assimétricos) */
+.splash-phrase-top-left {
+  top: 10%;
+  left: 5%;
+}
+
+.splash-phrase-top-right {
+  top: 22%;
+  right: 8%;
+}
+
+.splash-phrase-bottom-left {
+  bottom: 25%;
+  left: 12%;
+}
+
+.splash-phrase-bottom-right {
+  bottom: 12%;
+  right: 6%;
+}
+
+/* TAP TO SKIP Discreto */
+.splash-skip-indicator {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: monospace;
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #64748B;
+}
+
+.splash-skip-dot {
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 9999px;
+  background-color: #00F5D4;
+  animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
