@@ -1,0 +1,276 @@
+/* Container da Abordagem */
+.approach-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--color-pulso-bg, #0A0F1D);
+  color: #FFFFFF;
+  padding: 8vh clamp(2rem, 6vw, 6rem) 4vh;
+  display: flex;
+  flex-direction: column;
+  gap: 12vh;
+}
+
+/* 1. Intro */
+.approach-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 6vh;
+}
+
+.approach-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 300;
+  font-size: clamp(1.8rem, 3.5vw, 3.5rem);
+  line-height: 1.25;
+  max-width: 85%;
+  color: #F8FAFC;
+}
+
+.approach-production-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.production-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.production-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.production-caption {
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: #00F5D4;
+  letter-spacing: 0.1em;
+}
+
+/* 2. Idea */
+.idea-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.idea-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.idea-overlay-badge {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  right: 2rem;
+  background: rgba(10, 15, 29, 0.75);
+  backdrop-filter: blur(12px);
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  max-width: 600px;
+}
+
+.idea-quote {
+  font-size: clamp(1rem, 1.5vw, 1.35rem);
+  font-weight: 300;
+  line-height: 1.4;
+  color: #E2E8F0;
+}
+
+/* 3. Process */
+.approach-process {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.process-tag {
+  font-family: monospace;
+  font-size: 0.8rem;
+  color: #00F5D4;
+  letter-spacing: 0.2em;
+}
+
+.process-main-heading {
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.process-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.process-item {
+  display: flex;
+  gap: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.process-number {
+  font-family: monospace;
+  font-size: 1.5rem;
+  color: #64748B;
+}
+
+.process-content h4 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.process-content p {
+  color: #94A3B8;
+  font-weight: 300;
+  max-width: 650px;
+  line-height: 1.6;
+}
+
+/* 4. Images Slider (Scroll Container) */
+.approach-images-slider {
+  width: 100%;
+  height: 70vh;
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  cursor: ns-resize;
+}
+
+.slider-container-box {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  inset: 0px;
+  color: transparent;
+}
+
+.custom-image-wrapper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.custom_image__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.slider-controls-info {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  background: rgba(10, 15, 29, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem 2rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+  text-align: right;
+  z-index: 10;
+}
+
+.slider-counter {
+  font-family: monospace;
+  color: #00F5D4;
+  font-size: 0.9rem;
+}
+
+.slider-title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0.3rem 0;
+}
+
+.slider-hint {
+  font-size: 0.75rem;
+  color: #64748B;
+}
+
+/* 5. Impact Quote (CC) */
+.approach-impact-quote {
+  padding: 6vh 0;
+  text-align: center;
+}
+
+.impact-text {
+  font-size: clamp(2rem, 4vw, 4.5rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+  line-height: 1.15;
+}
+
+/* 6. Footer */
+.approach-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding-top: 4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 2rem;
+}
+
+.social-link {
+  color: #94A3B8;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #00F5D4;
+}
+
+.footer-credits {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  font-size: 0.9rem;
+  color: #64748B;
+}
+
+.footer-credits strong {
+  color: #FFFFFF;
+  font-weight: 500;
+}
+
+.footer-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.footer-svg-icon {
+  width: 120px;
+  height: 120px;
+  color: #FFFFFF;
+  opacity: 0.8;
+}

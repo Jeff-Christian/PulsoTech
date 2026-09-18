@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Header } from '../../components/ui/Header';
 import './PortfolioGallery.css';
 
 //IMAGENS
@@ -86,21 +87,13 @@ const PROJECTS = [
   }
 ];
 
-export const PortfolioGallery = () => {
+export const PortfolioGallery = ({ onNavigate }) => {
   const [activeProjectIndex, setActiveProjectIndex] = useState(0);
   const currentProject = PROJECTS[activeProjectIndex];
 
   return (
     <div className="gallery-container">
-      <header className="gallery-header">
-        <div className="gallery-brand">
-            <img src={pulsoLogo} alt="Pulso" className="brand-logo-img" />
-        </div>
-        <nav className="gallery-nav">
-          <button className="nav-link">Abordagem</button>
-          <button className="nav-link active">Trabalhos</button>
-        </nav>
-      </header>
+      <Header activeTab="inicial" onNavigate={onNavigate} />
 
       <main className="gallery-stage">
         <AnimatePresence mode="wait">

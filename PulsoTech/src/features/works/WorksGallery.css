@@ -1,0 +1,95 @@
+.works-container {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: var(--color-pulso-bg, #0A0F1D);
+  color: #FFFFFF;
+  padding: 3vh clamp(2rem, 6vw, 6rem) 6vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.works-main {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin-top: 2rem;
+}
+
+.works-tag {
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: #00F5D4;
+  letter-spacing: 0.2em;
+}
+
+.works-headline {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  font-weight: 300;
+  margin-top: 0.5rem;
+}
+
+/* Grid com 2 Colunas de Cards */
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+  gap: 3rem 2.5rem;
+}
+
+.work-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  cursor: pointer;
+}
+
+.work-image-box {
+  width: 100%;
+  height: 380px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.work-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.work-card:hover .work-image-box img {
+  transform: scale(1.05);
+}
+
+.work-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.work-title {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+
+.work-category {
+  display: block;
+  font-size: 0.9rem;
+  color: #94A3B8;
+  font-weight: 300;
+  margin-top: 0.2rem;
+}
+
+.work-year {
+  font-family: monospace;
+  font-size: 0.9rem;
+  color: #00F5D4;
+}
+
+@media (max-width: 768px) {
+  .works-grid {
+    grid-template-columns: 1fr;
+  }
+}
