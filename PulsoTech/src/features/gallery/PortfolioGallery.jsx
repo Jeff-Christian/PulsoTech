@@ -1,19 +1,19 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Header } from '../../components/ui/Header';
 import './PortfolioGallery.css';
 
 //IMAGENS
 import pulsoLogo from '../../assets/Pulso_logo.png';
-import colorful from '../../assets/colorful.jpg';
-import device_concept from '../../assets/device_concept.jpg';
-import digital from '../../assets/digital.jpg';
-import Iluminação from '../../assets/Iluminação.jpg';
-import Pulso from '../../assets/Pulso.jpg';
-import Ciano_Neon from '../../assets/Ciano_Neon.jpg';
-import Shades_Waves from '../../assets/Shades_Waves.jpg';
-import Sound_Wave from '../../assets/Sound_Wave.jpg';
-import Futuristic from '../../assets/Futuristic.jpg';
+import colorful from '../../assets/colorful.webp';
+import device_concept from '../../assets/device_concept.webp';
+import digital from '../../assets/digital.webp';
+import Iluminação from '../../assets/Iluminação.webp';
+import Pulso from '../../assets/Pulso.webp';
+import Ciano_Neon from '../../assets/Ciano_Neon.webp';
+import Shades_Waves from '../../assets/Shades_Waves.webp';
+import Sound_Wave from '../../assets/Sound_Wave.webp';
+import Futuristic from '../../assets/Futuristic.webp';
 
 const PROJECTS = [
   {
@@ -100,6 +100,16 @@ export const PortfolioGallery = ({ onNavigate }) => {
   const [activeProjectIndex, setActiveProjectIndex] = useState(0);
   const currentProject = PROJECTS[activeProjectIndex];
 
+  // PRÉ-CARREGAMENTO DA MEMÓRIA: Baixa todas as imagens no background assim que o componente carrega
+  useEffect(() => {
+    PROJECTS.forEach((project) => {
+      project.images.forEach((img) => {
+        const imageLoader = new Image();
+        imageLoader.src = img.url;
+      });
+    });
+  }, []);
+
   return (
     <div className="gallery-container">
       <Header activeTab="inicial" onNavigate={onNavigate} />
@@ -111,7 +121,7 @@ export const PortfolioGallery = ({ onNavigate }) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
             className="cards-grid-wrapper"
           >
             {currentProject.images.map((img) => (
@@ -140,7 +150,8 @@ export const PortfolioGallery = ({ onNavigate }) => {
                 style={{ zIndex: img.initialPos.zIndex }}
                 className={`portfolio-card ${img.sizeClass}`}
               >
-                <img src={img.url} alt={currentProject.title} loading="lazy" />
+                {/* Removido o loading="lazy" para rendering instantâneo */}
+                <img src={img.url} alt={currentProject.title} />
               </motion.div>
             ))}
           </motion.div>
