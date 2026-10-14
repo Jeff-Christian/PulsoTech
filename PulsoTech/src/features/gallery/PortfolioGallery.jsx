@@ -5,6 +5,15 @@ import './PortfolioGallery.css';
 
 //IMAGENS
 import pulsoLogo from '../../assets/Pulso_logo.png';
+import colorful from '../../assets/colorful.jpg';
+import device_concept from '../../assets/device_concept.jpg';
+import digital from '../../assets/digital.jpg';
+import Iluminação from '../../assets/Iluminação.jpg';
+import Pulso from '../../assets/Pulso.jpg';
+import Ciano_Neon from '../../assets/Ciano_Neon.jpg';
+import Shades_Waves from '../../assets/Shades_Waves.jpg';
+import Sound_Wave from '../../assets/Sound_Wave.jpg';
+import Futuristic from '../../assets/Futuristic.jpg';
 
 const PROJECTS = [
   {
@@ -15,19 +24,19 @@ const PROJECTS = [
     images: [
       { 
         id: 1, 
-        url: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=800&auto=format&fit=crop", 
+        url: colorful,
         sizeClass: "card-main",
         initialPos: { x: -30, y: 0, rotate: -2, zIndex: 3 }
       },
       { 
         id: 2, 
-        url: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=600&auto=format&fit=crop", 
+        url: device_concept,
         sizeClass: "card-secondary-1",
         initialPos: { x: 180, y: -60, rotate: 4, zIndex: 2 }
       },
       { 
         id: 3, 
-        url: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=600&auto=format&fit=crop", 
+        url: digital,
         sizeClass: "card-secondary-2",
         initialPos: { x: -220, y: 80, rotate: -6, zIndex: 1 }
       }
@@ -41,19 +50,19 @@ const PROJECTS = [
     images: [
       { 
         id: 1, 
-        url: "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?q=80&w=800&auto=format&fit=crop", 
+        url: Iluminação,
         sizeClass: "card-main",
         initialPos: { x: -30, y: 0, rotate: -2, zIndex: 3 }
       },
       { 
         id: 2, 
-        url: "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?q=80&w=600&auto=format&fit=crop", 
+        url: Pulso,
         sizeClass: "card-secondary-1",
         initialPos: { x: 180, y: -60, rotate: 4, zIndex: 2 }
       },
       { 
         id: 3, 
-        url: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=600&auto=format&fit=crop", 
+        url: Ciano_Neon,
         sizeClass: "card-secondary-2",
         initialPos: { x: -220, y: 80, rotate: -6, zIndex: 1 }
       }
@@ -67,19 +76,19 @@ const PROJECTS = [
     images: [
       { 
         id: 1, 
-        url: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=800&auto=format&fit=crop", 
+        url: Shades_Waves, 
         sizeClass: "card-main",
         initialPos: { x: -30, y: 0, rotate: -2, zIndex: 3 }
       },
       { 
         id: 2, 
-        url: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?q=80&w=600&auto=format&fit=crop", 
+        url: Sound_Wave, 
         sizeClass: "card-secondary-1",
         initialPos: { x: 180, y: -60, rotate: 4, zIndex: 2 }
       },
       { 
         id: 3, 
-        url: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=600&auto=format&fit=crop", 
+        url: Futuristic, 
         sizeClass: "card-secondary-2",
         initialPos: { x: -220, y: 80, rotate: -6, zIndex: 1 }
       }

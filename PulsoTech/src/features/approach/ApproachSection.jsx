@@ -3,21 +3,31 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Header } from '../../components/ui/Header';
 import './ApproachSection.css';
 
+// Importação das imagens
+import prototipagem from '../../assets/Prototipagem_Interface.jpg';
+import arquitetura from '../../assets/Arquitetura_Codigo.jpg';
+import design from '../../assets/Design.jpg';
+import interfaces from '../../assets/Interfaces.jpg';
+import Conceito from '../../assets/Conceito.jpg';
+import Branding from '../../assets/Branding.jpg';
+import emblem from '../../assets/Pulso_emblem.png'; // Ícone do logo
+
+
 // Mídias para o slider interativo controlado pelo scroll/hover
 const SLIDE_IMAGES = [
   {
     id: 1,
-    url: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1200&auto=format&fit=crop",
-    title: "Sistemas & Interfaces HMI"
+    url: interfaces,
+    title: "Interfaces Vivas & Fluidez"
   },
   {
     id: 2,
-    url: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1200&auto=format&fit=crop",
-    title: "Experiências Imersivas 3D"
+    url: Conceito,
+    title: "Conceito & Ideia"
   },
   {
     id: 3,
-    url: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop",
+    url: Branding,
     title: "Branding & Identidade Fluida"
   }
 ];
@@ -52,7 +62,7 @@ export const ApproachSection = ({ onNavigate }) => {
           viewport={{ once: true }}
           className="approach-title"
         >
-          Criamos soluções onde o código encontra a expressão humana. Sem fórmulas prontas, apenas execução de alto impacto.
+          Sua marca não precisa de mais do mesmo. Precisa de execução de alto nível.
         </motion.h2>
 
 
@@ -66,20 +76,20 @@ export const ApproachSection = ({ onNavigate }) => {
             viewport={{ once: true }}
             className="approach-title"
             >
-            Criamos soluções onde o código encontra a expressão humana. Sem fórmulas prontas, apenas execução de alto impacto.
+            Eliminamos o excesso e focamos no que realmente importa: tecnologia limpa, visual marcante e uma experiência que prende a atenção do seu cliente.
             </motion.h2>
 
             <div className="approach-production-grid">
             <div className="production-card">
                 <img 
-                src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=600&auto=format&fit=crop" 
+                src={prototipagem} 
                 alt="Produção de UI/UX" 
                 />
                 <span className="production-caption">01 / Prototipagem & Interface</span>
             </div>
             <div className="production-card">
                 <img 
-                src="https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=600&auto=format&fit=crop" 
+                src={arquitetura}
                 alt="Desenvolvimento de Código" 
                 />
                 <span className="production-caption">02 / Arquitetura & Código</span>
@@ -91,7 +101,7 @@ export const ApproachSection = ({ onNavigate }) => {
         <div className="approach-idea">
             <div className="idea-image-wrapper">
             <img 
-                src="https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=1200&auto=format&fit=crop" 
+                src={design} 
                 alt="Criação de Branding e Landing" 
             />
             <div className="idea-overlay-badge">
@@ -167,7 +177,7 @@ export const ApproachSection = ({ onNavigate }) => {
         {/* 5. CC: Frase de Impacto */}
         <div className="approach-impact-quote">
             <h3 className="impact-text">
-            "The series is done. Your version of it isn't."
+            "A estrutura tá pronta. Qual projeto vamos tirar do papel hoje?"
             </h3>
         </div>
 
@@ -187,11 +197,7 @@ export const ApproachSection = ({ onNavigate }) => {
 
             {/* Logo Icon SVG em destaque */}
             <div className="footer-logo-wrapper">
-            <svg className="footer-svg-icon" viewBox="0 0 512 512" fill="none">
-                <path d="M 125 235 A 132 132 0 1 1 387 235" stroke="currentColor" strokeWidth="22" strokeLinecap="round" />
-                <path d="M 387 277 A 132 132 0 0 1 125 277" stroke="currentColor" strokeWidth="22" strokeLinecap="round" />
-                <path d="M 82 256 C 125 256, 140 256, 160 270 C 180 284, 190 298, 205 256 C 220 214, 235 152, 256 210 C 275 262, 290 310, 312 235 C 330 175, 345 220, 360 256 C 375 292, 385 256, 430 256" stroke="#00F5D4" strokeWidth="24" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
+            <img src={emblem} className='footer-svg-icon' alt="Emblema da Pulso" />
             </div>
         </footer>
         </section>
